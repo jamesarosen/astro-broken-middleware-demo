@@ -1,9 +1,10 @@
 import type { MiddlewareHandler } from 'astro'
-import { setFooToBar } from './lib/a-shared-library'
+
+const NODE_ENV = import.meta.env.NODE_ENV;
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
   const response = await next()
   response.headers.set('middleware', 'true')
-  setFooToBar(response.headers);
+  response.headers.set('NODE_ENV', NODE_ENV);
   return response
 }

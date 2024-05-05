@@ -1,6 +1,4 @@
 ---
-import { setFooToBar } from '../lib/a-shared-library';
-
 interface Props {
 	title: string;
 	body: string;
@@ -8,8 +6,6 @@ interface Props {
 }
 
 const { href, title, body } = Astro.props;
-
-setFooToBar(Astro.response.headers);
 ---
 
 <li class="link-card">

@@ -4,10 +4,6 @@ import 'html-escaper';
 import 'clsx';
 /* empty css                          */
 
-const setFooToBar = (h) => {
-  h.set("foo", "bar");
-};
-
 const $$Astro$2 = createAstro();
 const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
@@ -21,7 +17,6 @@ const $$Card = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Card;
   const { href, title, body } = Astro2.props;
-  setFooToBar(Astro2.response.headers);
   return renderTemplate`${maybeRenderHead()}<li class="link-card" data-astro-cid-dohjnao5> <a${addAttribute(href, "href")} data-astro-cid-dohjnao5> <h2 data-astro-cid-dohjnao5> ${title} <span data-astro-cid-dohjnao5>&rarr;</span> </h2> <p data-astro-cid-dohjnao5> ${body} </p> </a> </li> `;
 }, "/Users/jamesrosen/Code/shaggy-spiral/src/components/Card.astro", void 0);
 
@@ -37,11 +32,4 @@ To get started, open the directory <code data-astro-cid-j7pv25f6>src/pages</code
 const $$file = "/Users/jamesrosen/Code/shaggy-spiral/src/pages/index.astro";
 const $$url = "";
 
-const index = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  default: $$Index,
-  file: $$file,
-  url: $$url
-}, Symbol.toStringTag, { value: 'Module' }));
-
-export { index as i, setFooToBar as s };
+export { $$Index as default, $$file as file, $$url as url };

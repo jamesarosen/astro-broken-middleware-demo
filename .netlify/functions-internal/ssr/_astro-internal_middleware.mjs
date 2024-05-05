@@ -1,11 +1,11 @@
-import { s as setFooToBar } from './chunks/pages/index_D1ekVaaF.mjs';
 import '@astrojs/internal-helpers/path';
 import 'cookie';
 
+const NODE_ENV = process.env.NODE_ENV;
 const onRequest$1 = async (context, next) => {
   const response = await next();
   response.headers.set("middleware", "true");
-  setFooToBar(response.headers);
+  response.headers.set("NODE_ENV", NODE_ENV);
   return response;
 };
 

@@ -11,7 +11,7 @@
 				const next = () => {
 					const { netlify, ...otherLocals } = ctx.locals;
 					request.headers.set("x-astro-locals", trySerializeLocals(otherLocals));
-					request.headers.set("x-astro-middleware-secret", "86ee3d5f-7905-4e76-b053-d7f960648e90");
+					request.headers.set("x-astro-middleware-secret", "a2033cf7-43da-4f17-b74a-bfcb5aa22762");
 					return context.next();
 				};
 			
